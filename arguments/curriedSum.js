@@ -1,11 +1,7 @@
 function curriedSum(numArgs) {
   let numbers = [];
   function _curriedSum() {
-    let args = Array.from(arguments);
-    // args = args.slice(1, args.length);
-    console.log(args);
-    console.log(numbers);
-    numbers.push(args[0]);
+    numbers.push(arguments[0]);
     if (numbers.length === numArgs) {
       let sum = 0;
       numbers.forEach( (el) => sum += el );
